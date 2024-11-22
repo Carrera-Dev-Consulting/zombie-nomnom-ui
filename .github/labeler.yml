@@ -1,0 +1,57 @@
+ui:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/**"
+pages:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/app/**/page.tsx"
+components:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/app/components/**/*"
+layout:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/app/**/layout.tsx"
+tests:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "tests/**"
+              - "jest.config.ts"
+# Tells us when devops related files are changing.
+devops:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file:
+              - ".github/**"
+              - "CODEOWNERS"
+              - "makefile"
+          - all-globs-to-all-files:
+              - "!.github/ISSUE_TEMPLATE/**"
+# Lets us know when we update some rules about the repo.
+rules-updated:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "CODEOWNERS"
+              - "CODE_OF_CONDUCT.md"
+              - "CONTRIBUTING.md"
+              - "LICENSE"
+              - "SECURITY.md"
+              - "pull_request_template.md"
+              - ".github/ISSUE_TEMPLATE/**"
+              - ".gitignore"
+# Tries its best to tell us when docs are changed.
+docs:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "README.md"
+# Lets us know if this might cause us to break.
+dependency-updated:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "package.json"
+              - "yarn.lock"
