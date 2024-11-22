@@ -27,7 +27,7 @@ export default function Header(props: HeaderProps) {
 
 function ListItem(props: { text: string; url: string }) {
   return (
-    <li className="mx-3 text-black bg-white rounded px-5 hover:bg-neutral-600 hover:text-white">
+    <li className="mx-3 text-black bg-white rounded px-5 hover:bg-neutral-600 hover:text-white transition-all duration-500">
       <Link href={props.url}>{props.text}</Link>
     </li>
   );
