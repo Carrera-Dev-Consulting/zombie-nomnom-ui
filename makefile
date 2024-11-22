@@ -8,3 +8,5 @@ start-dev:
 	yarn dev
 build:
 	yarn build
+docs:
+	yarn storybook
