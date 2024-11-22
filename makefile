@@ -1,5 +1,5 @@
 test:
-	yarn test --coverage --coverageReporters json-summary
+	yarn test --coverage 
 lint:
 	yarn lint --fix
 install:
