@@ -45,6 +45,7 @@ jobs:
     needs: publish-docker
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
