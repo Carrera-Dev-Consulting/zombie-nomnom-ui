@@ -3,7 +3,7 @@
 env: env
 image: latest
 port: 8000
-base_namespace: zombie-nomnom
+base_namespace: zombie-nomnom-ui
 base_app_name: zombie-nomnom-ui
 log_level: INFO
 replicas: 1
