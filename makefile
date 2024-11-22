@@ -1,5 +1,5 @@
 test:
-	yarn test --coverage --coverageReporters json-summary
+	yarn test --coverage 
 lint:
 	yarn lint --fix
 install:
@@ -10,3 +10,7 @@ build:
 	yarn build
 docs:
 	yarn storybook
+build-ui-docs:
+	yarn build-storybook
+build-api-docs:
+	yarn build-docs
