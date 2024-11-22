@@ -1,0 +1,22 @@
+name: Merge Main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  make-coverage:
+    permissions:
+      pull-requests: write
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".node-version"
+      - run: make install
+      - run: make test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage
