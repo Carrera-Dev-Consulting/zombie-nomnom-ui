@@ -68,5 +68,5 @@ jobs:
           commit-message: Updating ${{ env.FILE_NAME }} to version ${{ github.event.inputs.version }}
           draft: false
           labels: automated,deployment
-          branch: update-zombie-nomnom-api-${{github.event.inputs.env}}-${{ github.event.inputs.version }}
-          title: "deployment(zombie-nomnom-api):  ${{ github.event.inputs.version }}"
+          branch: update-zombie-nomnom-ui-${{github.event.inputs.env}}-${{ github.event.inputs.version }}
+          title: "deployment(zombie-nomnom-ui):  ${{ github.event.inputs.version }}"
