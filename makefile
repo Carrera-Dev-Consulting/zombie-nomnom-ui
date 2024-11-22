@@ -12,3 +12,5 @@ docs:
 	yarn storybook
 build-ui-docs:
 	yarn build-storybook
+build-api-docs:
+	yarn build-docs
