@@ -56,7 +56,11 @@ rules-updated:
 docs:
   - all:
       - changed-files:
-          - any-glob-to-any-file: "README.md"
+          - any-glob-to-any-file:
+              - "README.md"
+              - "**/*.mdx"
+              - "**/*.stories.tsx"
+              - ".storybook/**"
 # Lets us know if this might cause us to break.
 dependency-updated:
   - all:

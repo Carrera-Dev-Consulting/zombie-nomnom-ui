@@ -1,0 +1,28 @@
+import {Meta, Primary, Controls, Story} from '@storybook/blocks';
+import * as HeaderStories from './header.stories';
+
+<Meta of={HeaderStories} />
+
+# Header
+
+A Header is...
+
+<Primary />
+
+## Props 
+
+<Controls />
+
+## Stories
+
+### BasicHeader
+
+You can set links and a title to render it on the page.
+
+<Story of={HeaderStories.BasicHeader} />
+
+### No Links
+
+You can also just use it without having to define any links to render and it still looks good.
+
+<Story of={HeaderStories.NoLinks} />
