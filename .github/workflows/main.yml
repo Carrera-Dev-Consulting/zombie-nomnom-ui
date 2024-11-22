@@ -33,8 +33,6 @@ jobs:
       - name: Git Version
         id: version
         uses: codacy/git-version@2.7.1
-        with:
-          release-branch: main
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
