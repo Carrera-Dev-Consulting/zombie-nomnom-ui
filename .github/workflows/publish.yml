@@ -55,9 +55,11 @@ jobs:
         with:
           excludeTagsRegex: '^(\d+.){2}\d+-main.+$'
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: "chore(release): Update Changelog for ${{ github.event.release.tag_name }}"
-          branch: main
-          commit_user_name: Bender
-          push_options: --force
+          base: main
+          commit-message: Updating the CHANGELOG.md
+          draft: true
+          labels: automated,docs
+          branch: updated-changelog-${{ github.event.release.tag_name }}
+          title: "chore(changelog): Updating Changelog for version ${{ github.event.release.tag_name }}"
