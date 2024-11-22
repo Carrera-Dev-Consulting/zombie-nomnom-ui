@@ -20,8 +20,9 @@ jobs:
         with:
           name: coverage
           path: coverage
-  build-docs:
+  build-pages-artifact:
     runs-on: ubuntu-latest
+    needs: make-coverage
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -32,35 +33,19 @@ jobs:
         run: make build-ui-docs
       - name: Build API Docs
         run: make build-api-docs
-      - uses: actions/upload-artifact@v3
-        with:
-          name: docs
-          path: |
-            docs
-            storybook-static
-  build-pages-artifact:
-    needs:
-      - build-docs
-      - make-coverage
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: docs
-          path: compiled
       - uses: actions/download-artifact@v3
         with:
           name: coverage
           path: coverage
-      - shell: bash
+      - name: Package All Generated HTML
+        shell: bash
         run: |
-          mv compiled/docs docs
-          mv compiled/storybook-static docs/storybook
           mv coverage/lcov-report docs/coverage
-          rm -rf compiled coverage
+          mv storybook-static docs/storybook
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
+
   deploy:
     needs: build-pages-artifact
     runs-on: ubuntu-latest
