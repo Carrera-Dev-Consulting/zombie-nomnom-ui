@@ -60,3 +60,4 @@ jobs:
           commit_message: "chore(release): Update Changelog for ${{ github.event.release.tag_name }}"
           branch: main
           commit_user_name: Bender
+          push_options: --force
