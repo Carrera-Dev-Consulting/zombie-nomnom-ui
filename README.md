@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Zombie Nom Nom UI
+===
 
-## Getting Started
+Repo contains the source code for the Zombie Nom Nom Game UI and it is built using `Next.js`
+If you would like to build it locally please you will require `yarn` and whatever version is set in the `.node-version` file
+which is currently set to the lts version of 11/22/2024(v22.11.0)
 
-First, run the development server:
+Useful Links
+---
+
+Links to other build artifacts aside from this documentation
+
+- [Coverage Report](https://consulting.gxldcptrick.dev/zombie-nomnom-ui/coverage)
+- [Storybook](https://consulting.gxldcptrick.dev/zombie-nomnom-ui/storybook)
+- [API Docs](https://consulting.gxldcptrick.dev/zombie-nomnom-ui/)
+
+
+Usage
+---
+
+To install the required npm packages please use `yarn` and make sure to lock the file to not try to make adjustments.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    # Install the required dependencies
+    > yarn install --frozen-lockfile
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To serve the `Next.js` application and you don't set the `PORT` env variable we will be starting the web server at default port `3000`.
+This will kickstart the webpack server using hot reloading so you can mess around with the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+    > yarn dev # start webpack with hot-reload
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you would like to experiement with some of our existing frontend components you can run `storybook` with hot-reloading enabled.
 
-## Learn More
+```bash
+    > yarn storybook
+```
 
-To learn more about Next.js, take a look at the following resources:
+If you would like to test and you have `make` already installed you can use our `test` target to run tests with coverage otherwise
+you can use the packages `test` command to run only the tests with no coverage reports.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+    > make test
+    # Project Tests with coverage
+    > yarn test
+    # Project Tests without coverage
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Beyond that please refer to our Contributing guide in the repo to learn how we format our PR's and Code for adding new features.
