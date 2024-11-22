@@ -28,9 +28,18 @@ devops:
               - ".github/**"
               - "CODEOWNERS"
               - "makefile"
+              - "deployment/**"
+              - "Dockerfile"
+              - "docker-compose.yaml"
           - all-globs-to-all-files:
               - "!.github/ISSUE_TEMPLATE/**"
 # Lets us know when we update some rules about the repo.
+docker:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "Dockerfile"
+              - "docker-compose.yaml"
 rules-updated:
   - all:
       - changed-files:
