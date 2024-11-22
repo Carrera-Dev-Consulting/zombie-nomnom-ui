@@ -49,10 +49,17 @@ advances
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
-Your code must be formatted using black to properly space and create strings that are consistent.
+> Your code must be formatted using `prettier` to properly space and create strings that are consistent.
 
-All tests should follow the system_when_then pattern where each is clearly defined.
+> All tests should follow the best practices for jest where we group them using behavior driven tests. e.x.
 
+```ts
+describe("Component", () => {
+   it("Should Do Requirement", () => {
+      // Actual Test Code that checks requirement...
+   })
+})
+```
 
 ### Our Responsibilities
 
