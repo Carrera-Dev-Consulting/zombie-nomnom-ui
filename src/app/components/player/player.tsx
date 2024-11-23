@@ -4,7 +4,6 @@ interface PlayerProps {
 
 export default function Player(props: PlayerProps) {
   var player = props.player;
-  if (!player) player = { name: "Zombie", points: 0, current: false };
   return (
     <div
       className={

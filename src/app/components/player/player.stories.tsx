@@ -47,9 +47,3 @@ export const CurrentPlayer: Story = {
     },
   },
 };
-
-export const NoInformation: Story = {
-  args: {
-    player: undefined,
-  },
-};
