@@ -1,0 +1,40 @@
+import {Meta, Primary, Controls, Story} from '@storybook/blocks';
+import * as DieStories from './die.stories';
+
+<Meta of={DieStories} />
+
+# Header
+
+A Header is a component that can be used to render the main header on the page.
+
+<Primary />
+
+## Props 
+
+<Controls />
+
+## Stories
+
+### Red Die
+
+This is what a red die looks like when rendered on the page
+
+<Story of={DieStories.RedFootDie} />
+<Story of={DieStories.RedShotDie} />
+<Story of={DieStories.RedBrainDie} />
+
+### Green Die
+
+This is what a green die looks like when redered on the page
+
+<Story of={DieStories.GreenFootDie} />
+<Story of={DieStories.GreenShotDie} />
+<Story of={DieStories.GreenBrainDie} />
+
+### Yellow Die
+
+This is what a yellow die looks like when redered on the page
+
+<Story of={DieStories.YellowFootDie} />
+<Story of={DieStories.YellowShotDie} />
+<Story of={DieStories.YellowBrainDie} />

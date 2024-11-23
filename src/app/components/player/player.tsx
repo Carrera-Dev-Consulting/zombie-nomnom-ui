@@ -1,5 +1,7 @@
+import { PlayerModel } from "../../game/player";
+
 interface PlayerProps {
-  player: Player;
+  player: PlayerModel;
 }
 
 export default function Player(props: PlayerProps) {
