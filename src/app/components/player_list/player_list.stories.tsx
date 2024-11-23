@@ -11,6 +11,9 @@ var scenarios = {
       { name: "Xander", points: 5, current: false },
     ],
   },
+  noPlayers: {
+    players: [],
+  },
 };
 
 const meta: Meta<typeof PlayerList> = {
@@ -24,6 +27,12 @@ export default meta;
 
 export const BasicPlayerList: Story = {
   args: {
-    Players: scenarios.default.players,
+    players: scenarios.default.players,
+  },
+};
+
+export const NoPlayers: Story = {
+  args: {
+    players: scenarios.noPlayers.players,
   },
 };
