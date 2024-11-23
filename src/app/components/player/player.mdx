@@ -1,0 +1,33 @@
+import {Meta, Primary, Controls, Story} from '@storybook/blocks';
+import * as PlayerStories from './player.stories';
+
+<Meta of={PlayerStories} />
+
+# Player
+
+A Player is a component that can be used to render a player on the page.
+
+<Primary />
+
+## Props 
+
+<Controls />
+
+## Stories
+
+### Unselected Player
+
+This is what an unselected player looks like when redered on the page
+
+<Story of={PlayerStories.UnselectedPlayer} />
+
+### Current Player
+
+This is what a current player looks like when redered on the page
+
+<Story of={PlayerStories.CurrentPlayer} />
+
+### No Information Provided
+
+This is what a player looks like when no information is provided to the component
+<Story of={PlayerStories.NoInformation} />
