@@ -9,7 +9,7 @@ export default function Player(props: PlayerProps) {
   return (
     <div
       className={
-        "border-black border-2 rounded-lg justify-center items-center flex flex-col " +
+        "border-black border-2 rounded-lg justify-center items-center flex flex-col content-center " +
         (player.current ? "bg-green-200" : "bg-transparent")
       }
     >
