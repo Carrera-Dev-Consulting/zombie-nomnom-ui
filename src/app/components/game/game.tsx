@@ -17,7 +17,7 @@ export default function Game(props: GameProps) {
       <div className="mt-10 mb-16">
         <Options options={props.options} />
       </div>
-      <DiceBoard die={props.dice} />
+      <DiceBoard dice={props.dice} sorted={true} />
     </div>
   );
 }

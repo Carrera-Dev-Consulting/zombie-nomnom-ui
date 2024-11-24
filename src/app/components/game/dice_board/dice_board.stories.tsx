@@ -8,7 +8,7 @@ const meta: Meta<typeof DiceBoard> = {
   component: DiceBoard,
   tags: ["components"],
   args: {
-    die: [
+    dice: [
       { color: Color.red, face: Face.shot },
       { color: Color.red, face: Face.foot },
       { color: Color.red, face: Face.brain },
@@ -21,7 +21,7 @@ export default meta;
 
 export const BasicDiceBoard: Story = {
   args: {
-    die: [
+    dice: [
       { color: Color.red, face: Face.shot },
       { color: Color.red, face: Face.foot },
       { color: Color.red, face: Face.brain },
