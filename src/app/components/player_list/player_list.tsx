@@ -14,7 +14,7 @@ export default function PlayerList(props: PlayerProps) {
         ) : (
           props.players.map((player) => {
             return (
-              <li className="m-2 mx-5">
+              <li className="m-2 mx-5" key={player.name}>
                 <Player player={player} />
               </li>
             );

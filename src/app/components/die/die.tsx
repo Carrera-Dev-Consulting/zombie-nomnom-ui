@@ -4,20 +4,14 @@ import { Color, DieModel, Face } from "@/app/game/die";
 
 export interface DieProps {
   die: DieModel;
+  draw?: boolean;
 }
 let error = false;
 
-/**
- * Die displays a die.
- * If image is not provided, it renders a Die in a diamond shape with the color and face provided.
- * If image is provided, it renders an Image with the provided image and the face as alt text.
- * @param {DieProps} props
- * @returns A React component that displays the die.
- */
 export default function Die(props: DieProps) {
   let colorComponent = LoadColor(props.die.color);
   let faceComponent = LoadFace(props.die.face);
-  if (!error) {
+  if (!error && !props.draw) {
     return (
       <div className="relative m-1">
         {colorComponent} {faceComponent}
@@ -28,16 +22,7 @@ export default function Die(props: DieProps) {
   }
 }
 
-/**
- * Loads the image corresponding to the specified die color.
- * Returns an Image component with the source path based on the color.
- * Sets an error flag if the image fails to load.
- *
- * @param {Color} color - The color of the die.
- * @returns {JSX.Element} An Image component for the specified color.
- * @throws Will throw an error if the color is unknown.
- */
-function LoadColor(color: Color) {
+export function LoadColor(color: Color) {
   let path = "";
   switch (color) {
     case Color.red:
@@ -49,14 +34,12 @@ function LoadColor(color: Color) {
     case Color.green:
       path = "/images/Green Die.png";
       break;
-    default:
-      throw new Error("Unknown color");
   }
   return (
     <Image
       className="absolute"
       src={path}
-      alt={Color.red}
+      alt={color}
       onError={() => (error = true)}
       width={200}
       height={200}
@@ -64,16 +47,7 @@ function LoadColor(color: Color) {
   );
 }
 
-/**
- * Loads the image corresponding to the specified die face.
- * Returns an Image component with the source path based on the face.
- * Sets an error flag if the image fails to load.
- *
- * @param {Face} face - The face of the die.
- * @returns {JSX.Element} An Image component for the specified face.
- * @throws Will throw an error if the face is unknown.
- */
-function LoadFace(face: Face) {
+export function LoadFace(face: Face) {
   let path = "";
   switch (face) {
     case Face.brain:
@@ -85,13 +59,11 @@ function LoadFace(face: Face) {
     case Face.feet:
       path = "/images/feet.png";
       break;
-    default:
-      throw new Error("Unknown face");
   }
   return (
     <Image
       src={path}
-      alt={Face.brain}
+      alt={face}
       className="relative"
       onError={() => (error = true)}
       width={200}
@@ -100,6 +72,6 @@ function LoadFace(face: Face) {
   );
 }
 
-function DrawDie(props: DieProps) {
+export function DrawDie(props: DieProps) {
   return <div className="diamond">{props.die.face}</div>;
 }
