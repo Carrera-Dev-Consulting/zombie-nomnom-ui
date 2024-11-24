@@ -15,7 +15,7 @@ var scenarios = {
     },
     foot: {
       color: Color.red,
-      face: Face.feet,
+      face: Face.foot,
     },
   },
   yellow: {
@@ -29,7 +29,7 @@ var scenarios = {
     },
     feet: {
       color: Color.yellow,
-      face: Face.feet,
+      face: Face.foot,
     },
   },
   green: {
@@ -43,7 +43,7 @@ var scenarios = {
     },
     feet: {
       color: Color.green,
-      face: Face.feet,
+      face: Face.foot,
     },
   },
 };
@@ -126,7 +126,7 @@ export const YellowFootDie: Story = {
   args: {
     die: {
       color: Color.yellow,
-      face: Face.feet,
+      face: Face.foot,
     },
   },
 };

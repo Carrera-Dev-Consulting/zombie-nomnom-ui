@@ -56,7 +56,7 @@ export function LoadFace(face: Face) {
     case Face.shot:
       path = "/images/gun.png";
       break;
-    case Face.feet:
+    case Face.foot:
       path = "/images/feet.png";
       break;
   }

@@ -6,7 +6,7 @@ export interface DieModel {
 export enum Face {
   brain = "brain",
   shot = "shot",
-  feet = "feet",
+  foot = "foot",
 }
 
 export enum Color {
