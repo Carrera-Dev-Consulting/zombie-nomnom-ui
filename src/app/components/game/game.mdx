@@ -1,0 +1,20 @@
+import {Meta, Primary, Controls, Story} from '@storybook/blocks';
+import * as GameStories from './game.stories';
+
+<Meta of={GameStories} />
+
+# Game
+
+A Game is a component that can be used to render a game on the page.
+<Primary />
+
+## Props 
+
+<Controls />
+
+## Stories
+
+### Basic 
+
+This is what a basic game looks like when redered on the page
+<Story of={GameStories.BasicGame} />
