@@ -1,6 +1,5 @@
-import { DieModel } from "../../src/app/game/game";
 import { describe, expect, it } from "@jest/globals";
-import { Face, Color } from "../../src/app/game/game";
+import { Color, Face } from "../../src/app/game/die";
 
 describe("Die Model", () => {
   it("Initalizing Red Die should have the right values", async () => {

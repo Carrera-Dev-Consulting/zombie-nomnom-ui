@@ -2,7 +2,7 @@ import * as React from "react";
 import Die from "../../src/app/components/die/die";
 import { describe, expect, it } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-import { Color, Face } from "../../src/app/game/game";
+import { Color, Face } from "../../src/app/game/die";
 
 describe("Die Component", () => {
   it("Red Shot Die should render", async () => {
