@@ -2,7 +2,7 @@ interface OptionsProps {
   options: ButtonItemProps[];
 }
 
-interface ButtonItemProps {
+export interface ButtonItemProps {
   buttonName: string;
   callback: () => void;
 }
