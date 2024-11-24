@@ -2,7 +2,6 @@ import * as React from "react";
 import Player from "../../src/app/components/player/player";
 import { describe, it, expect } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 
 describe("Non current Player Component", () => {
   it("Player should render player values", async () => {

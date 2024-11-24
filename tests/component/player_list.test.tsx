@@ -1,8 +1,7 @@
 import * as React from "react";
 import PlayerList from "../../src/app/components/player_list/player_list";
 import { describe, it, expect } from "@jest/globals";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
+import { render } from "@testing-library/react";
 
 var scenarios = {
   validPlayerList: {

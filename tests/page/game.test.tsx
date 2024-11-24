@@ -1,9 +1,7 @@
 import * as React from "react";
 import GamePage from "../../src/app/game/page";
 import { describe, expect, it } from "@jest/globals";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { Color, Face } from "@/app/game/die";
+import { render } from "@testing-library/react";
 
 describe("Game Component", () => {
   it("Game should render with dice", async () => {

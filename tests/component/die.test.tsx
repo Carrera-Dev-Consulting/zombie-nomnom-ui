@@ -2,8 +2,7 @@ import * as React from "react";
 import Die from "../../src/app/components/die/die";
 import { describe, expect, it } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { Face, Color } from "../../src/app/game/die";
+import { Color, Face } from "../../src/app/game/game";
 
 describe("Die Component", () => {
   it("Red Shot Die should render", async () => {
@@ -14,8 +13,8 @@ describe("Die Component", () => {
         die={{ face: Face.shot, color: Color.red }}
       />
     );
-    const face = screen.getByAltText("shot");
-    const color = screen.getByAltText("red");
+    const face = screen.getByAltText("shot") as HTMLImageElement;
+    const color = screen.getByAltText("red") as HTMLImageElement;
     expect(face.src).toContain("gun.png");
     expect(color.src).toContain("Red%20Die.png");
   });
@@ -28,8 +27,8 @@ describe("Die Component", () => {
         die={{ face: Face.foot, color: Color.red }}
       />
     );
-    const face = screen.getByAltText("foot");
-    const color = screen.getByAltText("red");
+    const face = screen.getByAltText("foot") as HTMLImageElement;
+    const color = screen.getByAltText("red") as HTMLImageElement;
     expect(face.src).toContain("feet.png");
     expect(color.src).toContain("Red%20Die.png");
   });
@@ -42,8 +41,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("brain");
-    const color = screen.getByAltText("red");
+    const face = screen.getByAltText("brain") as HTMLImageElement;
+    const color = screen.getByAltText("red") as HTMLImageElement;
     expect(face.src).toContain("brain.png");
     expect(color.src).toContain("Red%20Die.png");
   });
@@ -56,8 +55,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("shot");
-    const color = screen.getByAltText("yellow");
+    const face = screen.getByAltText("shot") as HTMLImageElement;
+    const color = screen.getByAltText("yellow") as HTMLImageElement;
     expect(face.src).toContain("gun.png");
     expect(color.src).toContain("Yellow%20Die.png");
   });
@@ -70,8 +69,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("foot");
-    const color = screen.getByAltText("yellow");
+    const face = screen.getByAltText("foot") as HTMLImageElement;
+    const color = screen.getByAltText("yellow") as HTMLImageElement;
     expect(face.src).toContain("feet.png");
     expect(color.src).toContain("Yellow%20Die.png");
   });
@@ -84,8 +83,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("brain");
-    const color = screen.getByAltText("yellow");
+    const face = screen.getByAltText("brain") as HTMLImageElement;
+    const color = screen.getByAltText("yellow") as HTMLImageElement;
     expect(face.src).toContain("brain.png");
     expect(color.src).toContain("Yellow%20Die.png");
   });
@@ -98,8 +97,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("shot");
-    const color = screen.getByAltText("green");
+    const face = screen.getByAltText("shot") as HTMLImageElement;
+    const color = screen.getByAltText("green") as HTMLImageElement;
     expect(face.src).toContain("gun.png");
     expect(color.src).toContain("Green%20Die.png");
   });
@@ -112,8 +111,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("foot");
-    const color = screen.getByAltText("green");
+    const face = screen.getByAltText("foot") as HTMLImageElement;
+    const color = screen.getByAltText("green") as HTMLImageElement;
     expect(face.src).toContain("feet.png");
     expect(color.src).toContain("Green%20Die.png");
   });
@@ -126,8 +125,8 @@ describe("Die Component", () => {
         width={100}
       />
     );
-    const face = screen.getByAltText("brain");
-    const color = screen.getByAltText("green");
+    const face = screen.getByAltText("brain") as HTMLImageElement;
+    const color = screen.getByAltText("green") as HTMLImageElement;
     expect(face.src).toContain("brain.png");
     expect(color.src).toContain("Green%20Die.png");
   });

@@ -1,9 +1,6 @@
-import * as React from "react";
-import { DieModel } from "../../src/app/game/die";
+import { DieModel } from "../../src/app/game/game";
 import { describe, expect, it } from "@jest/globals";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { Face, Color } from "../../src/app/game/die";
+import { Face, Color } from "../../src/app/game/game";
 
 describe("Die Model", () => {
   it("Initalizing Red Die should have the right values", async () => {
