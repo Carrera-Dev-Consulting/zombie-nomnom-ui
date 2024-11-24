@@ -1,8 +1,7 @@
 import * as React from "react";
-import Header from "../../src/app/components/header/header";
 import { describe, expect, it } from "@jest/globals";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
+import { render } from "@testing-library/react";
+import Header from "../../src/app/components/header/header";
 
 describe("Header Component", () => {
   it("Header should render with no links", async () => {

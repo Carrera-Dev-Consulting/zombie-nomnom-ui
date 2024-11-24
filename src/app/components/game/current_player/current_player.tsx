@@ -1,4 +1,4 @@
-interface CurrentPlayerProps {
+export interface CurrentPlayerProps {
   shots: number;
   possiblePoints: number;
 }

@@ -30,5 +30,5 @@
     "name": "Zombie Nom Nom UI Docs" // Name of your documentation site
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "tests"]
 }

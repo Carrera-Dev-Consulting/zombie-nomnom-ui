@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-interface HeaderProps {
+export interface HeaderProps {
   title: string;
   links: ListItemProps[];
 }
 
-interface ListItemProps {
+export interface ListItemProps {
   text: string;
   url: string;
 }

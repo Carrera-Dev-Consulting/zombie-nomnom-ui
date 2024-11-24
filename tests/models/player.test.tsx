@@ -1,6 +1,5 @@
-import { PlayerModel } from "../../src/app/game/player";
+import { PlayerModel } from "../../src/app/game/game";
 import { describe, expect, it } from "@jest/globals";
-import "@testing-library/jest-dom";
 
 describe("Player Model", () => {
   it("Initalizing a non current Player should have the right values", async () => {

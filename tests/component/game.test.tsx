@@ -1,10 +1,9 @@
 import * as React from "react";
 import Game from "../../src/app/components/game/game";
 import { describe, expect, it } from "@jest/globals";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { ButtonItemProps } from "@/app/components/game/options/options";
-import { Color, Face } from "@/app/game/die";
+import { render } from "@testing-library/react";
+import { ButtonItemProps } from "../../src/app/components/game/options/options";
+import { Color, Face } from "../../src/app/game/die";
 
 describe("Game Component", () => {
   let defaultOptions: ButtonItemProps[] = [

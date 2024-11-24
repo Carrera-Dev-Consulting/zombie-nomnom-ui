@@ -1,7 +1,7 @@
 import { DieModel, Face } from "@/app/game/die";
 import Die from "../../die/die";
 
-interface DiceBoardProps {
+export interface DiceBoardProps {
   dice: DieModel[];
   sorted: boolean;
 }

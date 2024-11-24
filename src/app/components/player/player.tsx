@@ -1,6 +1,6 @@
 import { PlayerModel } from "../../game/player";
 
-interface PlayerProps {
+export interface PlayerProps {
   player: PlayerModel;
 }
 

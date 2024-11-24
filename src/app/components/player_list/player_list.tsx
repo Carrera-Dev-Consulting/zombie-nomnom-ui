@@ -1,7 +1,7 @@
 import { PlayerModel } from "@/app/game/player";
 import Player from "../player/player";
 
-interface PlayerProps {
+export interface PlayerProps {
   players: PlayerModel[];
 }
 
