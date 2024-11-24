@@ -3,7 +3,7 @@ import Options, { ButtonItemProps } from "./options/options";
 import CurrentPlayer from "./current_player/current_player";
 import { DieModel } from "@/app/game/die";
 
-interface GameProps {
+export interface GameProps {
   shot: number;
   possiblePoints: number;
   options: ButtonItemProps[];

@@ -1,4 +1,4 @@
-interface OptionsProps {
+export interface OptionsProps {
   options: ButtonItemProps[];
 }
 
