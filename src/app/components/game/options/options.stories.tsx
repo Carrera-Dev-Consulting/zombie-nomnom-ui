@@ -10,13 +10,13 @@ const meta: Meta<typeof Options> = {
     options: [
       {
         buttonName: "Roll for More",
-        callback: () => {
+        press: () => {
           console.log("Roll for More");
         },
       },
       {
         buttonName: "Eat brains",
-        callback: () => {
+        press: () => {
           console.log("MMMMM Brains");
         },
       },
@@ -32,13 +32,13 @@ export const BasicOptions: Story = {
     options: [
       {
         buttonName: "Roll for More",
-        callback: () => {
+        press: () => {
           console.log("Roll for More");
         },
       },
       {
         buttonName: "Eat brains",
-        callback: () => {
+        press: () => {
           console.log("MMMMM Brains");
         },
       },
