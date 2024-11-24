@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import "./die.css";
 import { Color, DieModel, Face } from "@/app/game/die";
@@ -5,15 +6,17 @@ import { Color, DieModel, Face } from "@/app/game/die";
 export interface DieProps {
   die: DieModel;
   draw?: boolean;
+  width: number;
+  height: number;
 }
 let error = false;
 
 export default function Die(props: DieProps) {
-  let colorComponent = LoadColor(props.die.color);
-  let faceComponent = LoadFace(props.die.face);
+  let colorComponent = LoadColor(props);
+  let faceComponent = LoadFace(props);
   if (!error && !props.draw) {
     return (
-      <div className="relative m-1">
+      <div className="relative aspect-square ">
         {colorComponent} {faceComponent}
       </div>
     );
@@ -22,9 +25,9 @@ export default function Die(props: DieProps) {
   }
 }
 
-export function LoadColor(color: Color) {
+export function LoadColor(props: DieProps) {
   let path = "";
-  switch (color) {
+  switch (props.die.color) {
     case Color.red:
       path = "/images/Red Die.png";
       break;
@@ -37,19 +40,19 @@ export function LoadColor(color: Color) {
   }
   return (
     <Image
-      className="absolute"
+      className="absolute object-cover object-center aspect-square"
       src={path}
-      alt={color}
+      alt={props.die.color}
       onError={() => (error = true)}
-      width={200}
-      height={200}
+      width={props.width}
+      height={props.height}
     />
   );
 }
 
-export function LoadFace(face: Face) {
+export function LoadFace(props: DieProps) {
   let path = "";
-  switch (face) {
+  switch (props.die.face) {
     case Face.brain:
       path = "/images/brain.png";
       break;
@@ -63,11 +66,11 @@ export function LoadFace(face: Face) {
   return (
     <Image
       src={path}
-      alt={face}
-      className="relative"
+      alt={props.die.face}
+      className="relative object-cover object-center transition-all aspect-square"
       onError={() => (error = true)}
-      width={200}
-      height={200}
+      width={props.width}
+      height={props.height}
     />
   );
 }

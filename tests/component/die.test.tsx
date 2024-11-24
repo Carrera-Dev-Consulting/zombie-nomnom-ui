@@ -7,7 +7,13 @@ import { Face, Color } from "../../src/app/game/die";
 
 describe("Die Component", () => {
   it("Red Shot Die should render", async () => {
-    const wrapper = render(<Die die={{ face: Face.shot, color: Color.red }} />);
+    const wrapper = render(
+      <Die
+        height={100}
+        width={100}
+        die={{ face: Face.shot, color: Color.red }}
+      />
+    );
     const face = screen.getByAltText("shot");
     const color = screen.getByAltText("red");
     expect(face.src).toContain("gun.png");
@@ -15,8 +21,14 @@ describe("Die Component", () => {
   });
 
   it("Red Foot Die should render", async () => {
-    const wrapper = render(<Die die={{ face: Face.foot, color: Color.red }} />);
-    const face = screen.getByAltText("feet");
+    const wrapper = render(
+      <Die
+        height={100}
+        width={100}
+        die={{ face: Face.foot, color: Color.red }}
+      />
+    );
+    const face = screen.getByAltText("foot");
     const color = screen.getByAltText("red");
     expect(face.src).toContain("feet.png");
     expect(color.src).toContain("Red%20Die.png");
@@ -24,7 +36,11 @@ describe("Die Component", () => {
 
   it("Red Brain Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.brain, color: Color.red }} />
+      <Die
+        die={{ face: Face.brain, color: Color.red }}
+        height={100}
+        width={100}
+      />
     );
     const face = screen.getByAltText("brain");
     const color = screen.getByAltText("red");
@@ -34,7 +50,11 @@ describe("Die Component", () => {
 
   it("Yellow Shot Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.shot, color: Color.yellow }} />
+      <Die
+        die={{ face: Face.shot, color: Color.yellow }}
+        height={100}
+        width={100}
+      />
     );
     const face = screen.getByAltText("shot");
     const color = screen.getByAltText("yellow");
@@ -44,9 +64,13 @@ describe("Die Component", () => {
 
   it("Yellow Foot Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.foot, color: Color.yellow }} />
+      <Die
+        die={{ face: Face.foot, color: Color.yellow }}
+        height={100}
+        width={100}
+      />
     );
-    const face = screen.getByAltText("feet");
+    const face = screen.getByAltText("foot");
     const color = screen.getByAltText("yellow");
     expect(face.src).toContain("feet.png");
     expect(color.src).toContain("Yellow%20Die.png");
@@ -54,7 +78,11 @@ describe("Die Component", () => {
 
   it("Yellow Brain Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.brain, color: Color.yellow }} />
+      <Die
+        die={{ face: Face.brain, color: Color.yellow }}
+        height={100}
+        width={100}
+      />
     );
     const face = screen.getByAltText("brain");
     const color = screen.getByAltText("yellow");
@@ -64,7 +92,11 @@ describe("Die Component", () => {
 
   it("Green Shot Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.shot, color: Color.green }} />
+      <Die
+        die={{ face: Face.shot, color: Color.green }}
+        height={100}
+        width={100}
+      />
     );
     const face = screen.getByAltText("shot");
     const color = screen.getByAltText("green");
@@ -74,9 +106,13 @@ describe("Die Component", () => {
 
   it("Green Foot Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.foot, color: Color.green }} />
+      <Die
+        die={{ face: Face.foot, color: Color.green }}
+        height={100}
+        width={100}
+      />
     );
-    const face = screen.getByAltText("feet");
+    const face = screen.getByAltText("foot");
     const color = screen.getByAltText("green");
     expect(face.src).toContain("feet.png");
     expect(color.src).toContain("Green%20Die.png");
@@ -84,7 +120,11 @@ describe("Die Component", () => {
 
   it("Green Brain Die should render", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.brain, color: Color.green }} />
+      <Die
+        die={{ face: Face.brain, color: Color.green }}
+        height={100}
+        width={100}
+      />
     );
     const face = screen.getByAltText("brain");
     const color = screen.getByAltText("green");
@@ -94,14 +134,24 @@ describe("Die Component", () => {
 
   it("Red Die shotgun is drawn when told to draw", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.shot, color: Color.red }} draw={true} />
+      <Die
+        die={{ face: Face.shot, color: Color.red }}
+        draw={true}
+        height={100}
+        width={100}
+      />
     );
     expect(await wrapper.findByText("shot")).toBeTruthy();
   });
 
   it("Red Die brain is drawn when told to draw", async () => {
     const wrapper = render(
-      <Die die={{ face: Face.brain, color: Color.red }} draw={true} />
+      <Die
+        die={{ face: Face.brain, color: Color.red }}
+        draw={true}
+        height={100}
+        width={100}
+      />
     );
     expect(await wrapper.findByText("brain")).toBeTruthy();
   });
