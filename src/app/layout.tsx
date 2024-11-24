@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./components/header/header";
+
+const links = [
+  { text: "Leaderboard", url: "/leaderboard" },
+  { text: "About Us", url: "/about" },
+];
+
+const title = "Zombie Nom Nom";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,12 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-full h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-[80%]`}
       >
-        <nav className="bg-gray-800">
-        </nav>
+        <Header links={links} title={title} />
         {children}
       </body>
     </html>

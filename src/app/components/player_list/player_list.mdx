@@ -1,0 +1,26 @@
+import {Meta, Primary, Controls, Story} from '@storybook/blocks';
+import * as PlayerListStories from './player_list.stories';
+
+<Meta of={PlayerListStories} />
+
+# Player List
+
+A Player List is a component that can be used to render a list of players on the page.
+
+<Primary />
+
+## Props 
+
+<Controls />
+
+## Stories
+
+### Basic Player List
+
+This is what a basic player list looks like when redered on the page
+<Story of={PlayerListStories.BasicPlayerList} />
+
+### No Players
+
+This is what a player list looks like when redered on the page with no players
+<Story of={PlayerListStories.NoPlayers} />
