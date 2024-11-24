@@ -56,6 +56,8 @@ const meta: Meta<typeof Die> = {
       color: Color.red,
       face: Face.shot,
     },
+    height: 100,
+    width: 100,
   },
 };
 type Story = StoryObj<typeof Die>;
@@ -68,48 +70,64 @@ export const BasicDie: Story = {
       color: Color.red,
       face: Face.shot,
     },
+    height: 100,
+    width: 100,
   },
 };
 
 export const RedShotDie: Story = {
   args: {
     die: scenarios.red.shot,
+    height: 100,
+    width: 100,
   },
 };
 
 export const RedFootDie: Story = {
   args: {
     die: scenarios.red.foot,
+    height: 100,
+    width: 100,
   },
 };
 
 export const RedBrainDie: Story = {
   args: {
     die: scenarios.red.brain,
+    height: 100,
+    width: 100,
   },
 };
 
 export const GreenFootDie: Story = {
   args: {
     die: scenarios.green.feet,
+    height: 100,
+    width: 100,
   },
 };
 
 export const GreenBrainDie: Story = {
   args: {
     die: scenarios.green.brain,
+    height: 100,
+    width: 100,
   },
 };
 
 export const GreenShotDie: Story = {
   args: {
     die: scenarios.green.shot,
+    height: 100,
+    width: 100,
   },
 };
 
 export const YellowBrainDie: Story = {
   args: {
     die: scenarios.yellow.brain,
+    height: 100,
+    width: 100,
   },
 };
 
@@ -119,6 +137,8 @@ export const YellowShotDie: Story = {
       color: Color.yellow,
       face: Face.shot,
     },
+    height: 100,
+    width: 100,
   },
 };
 
@@ -128,5 +148,7 @@ export const YellowFootDie: Story = {
       color: Color.yellow,
       face: Face.foot,
     },
+    height: 100,
+    width: 100,
   },
 };
